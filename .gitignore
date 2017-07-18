@@ -4,6 +4,7 @@
 
 ### STS ###
 bin/
+build/
 .apt_generated
 .classpath
 .factorypath

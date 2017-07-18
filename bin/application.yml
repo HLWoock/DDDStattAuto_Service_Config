@@ -8,3 +8,4 @@ spring:
           uri: C:/Users/hermannw/Git/DDD_StattAuto
 server:
   port: 8888
+  
