@@ -1,15 +1,13 @@
+group 'de.oose'
+version '0.0.1'
+
 apply plugin: 'eclipse'
 apply from: "$rootDir/gradle/java.gradle"
+apply from: "$rootDir/gradle/version.gradle"
 apply from: "$rootDir/gradle/spring-boot.gradle"
 apply from: "$rootDir/gradle/spring-cloud.gradle"
 apply from: "$rootDir/gradle/integration-test.gradle"
 apply from: "$rootDir/gradle/docker.gradle"
-
-ext {
-    project.group = 'de.oose'
-    project.applicationName = 'stattauto-service-config'
-    project.version = '0.0.3-SNAPSHOT'
-}
 
 buildscript {
     repositories {
@@ -25,7 +23,7 @@ buildscript {
 }
 
 jar {
-    baseName = project.group + '.' + project.applicationName
+    baseName = project.group + '.' + project.name
     version = project.version
 }
 
@@ -34,5 +32,3 @@ repositories {
     maven { url "https://repo.spring.io/snapshot" }
     maven { url "https://repo.spring.io/milestone" }
 }
-
-
