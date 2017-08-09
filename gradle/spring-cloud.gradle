@@ -1,3 +1,7 @@
+/**
+ * spring cloud dependencies
+ */
+
 dependencies {
     compile 'org.springframework.cloud:spring-cloud-config-server'
 }
